@@ -10,13 +10,14 @@
 // Bonus: usare due tipi di cicli, se usate per il primo il for in bonus  fate un while.
 // <============================INIZIO==================================>
 // Variabile
-var numero = 1;
-
+var numero = 0;
 // Stampa su console
-  // Ciclo for
-  for (var numero = 1; numero <= 100; numero++) {
+  // Ciclo while
+  while (numero <= 100) {
   // Condizione
-    if ((numero % 3 == 0) && (numero % 5 == 0)) {
+  if (numero == 0) {
+    console.log('INIZIO CICLO WHILE');
+    }  else if ((numero % 3 == 0) && (numero % 5 == 0)) {
       console.log('FizzBuzz');
     } else if (numero % 3 == 0){
       console.log('Fizz');
@@ -25,11 +26,13 @@ var numero = 1;
     } else {
       console.log(numero);
     }
+    numero++;
 };
-
+// Variabile
+var numero = 1;
 // Stampa su HTML
-  // Ciclo for
-  for (var numero = 1; numero <= 100; numero++) {
+  // Ciclo while
+  while (numero <= 100) {
   // Condizione
     if ((numero % 3 == 0) && (numero % 5 == 0)) {
       document.getElementById('lista-numeri').innerHTML+= '<li>FizzBuzz</li>';
@@ -40,5 +43,29 @@ var numero = 1;
     } else {
       document.getElementById('lista-numeri').innerHTML+= '<li>' + numero + '</li>';
     }
+    numero++;
   };
+
+  // Variabile
+  var numero = 0;
+    // Ciclo Do while
+    do {
+      // Condizione
+        if (numero == 0) {
+          console.log('INIZIO CICLO DO WHILE');
+        } else if ((numero % 3 == 0) && (numero % 5 == 0)) {
+        console.log('FizzBuzz');
+        document.getElementById('lista-numeri-1').innerHTML+= '<li>FizzBuzz</li>';
+      } else if (numero % 3 == 0) {
+          console.log('Fizz');
+          document.getElementById('lista-numeri-1').innerHTML+= '<li>Buzz</li>';
+        } else if (numero % 5 == 0){
+          console.log('Buzz');
+          document.getElementById('lista-numeri-1').innerHTML+= '<li>Fizz</li>';
+        } else {
+          console.log(numero);
+          document.getElementById('lista-numeri-1').innerHTML+= '<li>' + numero + '</li>';
+        }
+        numero++;
+    } while (numero <= 100);
 // <============================FINE==================================>
